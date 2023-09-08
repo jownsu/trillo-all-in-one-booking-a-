@@ -5,6 +5,12 @@
     box-shadow: var(--shadow_dark);
     min-height: 50rem;
 
+    @media only screen and (max-width: $bp_largest){
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+
 }
 
 .header{
@@ -15,10 +21,20 @@
     display: flex; 
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: $bp_smallest){
+        flex-wrap: wrap;
+        height: 11rem;
+        align-content: space-around;
+    }
 }
 
 .content{
     display: flex;
+
+    @media only screen and (max-width: $bp_medium){
+        flex-direction: column;
+    }
 }
 
 .sidebar{
@@ -41,6 +57,15 @@
     padding: 4.5rem;
     background-color: var(--color_grey_light_1);
     border-bottom: var(--line);
+    
+    @media only screen and (max-width: $bp_medium){
+        padding: 3rem;
+        gap: 3rem;
+    }
+
+    @media only screen and (max-width: $bp_small){
+        flex-direction: column;
+    }
 }
 
 .description{
@@ -49,6 +74,14 @@
     box-shadow: var(--shadow_light);
     padding: 3rem;
     flex: 0 0 60%; 
+
+    @media only screen and (max-width: $bp_medium){
+        padding: 2rem;
+    }
+
+    @media only screen and (max-width: $bp_small){
+        margin-bottom: 3rem;
+    }
 }
 
 .user-reviews{
